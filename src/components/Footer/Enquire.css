@@ -1,0 +1,108 @@
+.app__enquire{
+    padding: 2rem 4rem;
+    border: 1px solid #D9CCC5;
+    background: #3A3136;
+    margin-top: 7rem;
+    position: relative;
+    transition: height 0.3s ease;
+    height: auto;
+}
+
+.app__enquire-heading {
+    text-align: center;
+}
+
+.app__enquire-heading p {
+    color: #D9CCC5;
+  }
+
+.app__enquire-input {
+    flex-direction: column;
+    margin-top: 3rem;
+    color: #D9CCC5;
+}
+
+.app__enquire-input input {
+    width: 620px;
+    border: 1px solid #D9CCC5;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-base);
+    color: #D9CCC5;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    padding: 0.75rem 1rem;
+    background: #3A3136;
+}
+
+.app__enquire-input button {
+    width: max-content;
+}
+.app__enquire-submitted {
+    height: 12rem;
+}
+.form__submission-message {
+    font-size: 1rem;
+    font-family: var(--font-base);
+    color: #D9CCC5;
+    text-align: center;
+    margin-top: 1rem;  
+}
+
+.shake-animation {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+@media screen and (min-width: 2000px) {
+    .app__enquire-input input {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .app__enquire-input {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app__enquire-input input {
+        margin: 0 0 2rem 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__enquire{
+        padding: 2rem 0;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .app__enquire-heading h1 {
+        font-size: 32px;
+        line-height: 50px;
+    }
+
+
+}

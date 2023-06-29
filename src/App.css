@@ -107,6 +107,27 @@
   letter-spacing: 0.04em;
   text-transform: capitalize;
 }
+@media screen and (max-width: 1170px) {
+  .app__wrapper,
+  .app__wrapper_img,
+  .app__wrapper_img-reverse,
+  .app__wrapper_img img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section__padding {
+    padding: 2rem;
+  }
+
+  .p__opensans,
+  .p__opensans-navbar,
+  .headtext__opensans {
+    font-size: 16px;
+  }
+}
+
 
 @media screen and (max-width: 1150px) {
   .app__wrapper {

@@ -35,7 +35,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="app__gallery flex__center">
+    <div className="app__gallery flex__center" style={{ marginBottom: '-2' }}>
       <div className="app__gallery-content" style={{margin: '24rem 0 '}}>
         <SubHeading title="Instagram" />
         <h1 className="headtext__opensans" >Photo Gallery</h1>
@@ -70,7 +70,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          {[images.bath2, images.bath3, images.bath4, images.bath5, images.bath6, images.bath7, images.bath8, images.masterbedroom, images.doublebedroom, images.kitchen , images.garden].map(
+          {[images.fbathroom, images.bath1, images.bath4,images.masterbedroom,images.ensuite,images.hallway,images.doublebedroom,images.largesinglebedroom,images.livingroom,images.kitchen,images.garden].map(
             (image, index) => (
               <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 2}`}>
                 <img src={image} alt="gallery_image" />

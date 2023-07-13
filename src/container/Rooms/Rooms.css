@@ -8,7 +8,7 @@
     letter-spacing: 0.04rem;
     text-transform: capitalize;
     line-height: 117px;
-    font-size: 60px;
+    font-size: 0px;
   }
   
   .app__header {
@@ -21,8 +21,14 @@
     letter-spacing: 0.04rem;
     text-transform: capitalize;
     line-height: 117px;
-    font-size: 90px;
+    font-size: 60px;
   }
+  .app__bullet-list {
+    list-style-type: disc; 
+    margin: -2rem 0; 
+    padding-left: 1.5rem; 
+  }
+  
   
   
   

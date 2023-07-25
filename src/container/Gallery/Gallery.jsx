@@ -70,7 +70,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          {[images.fbathroom, images.bath1, images.bath4,images.masterbedroom,images.ensuite,images.hallway,images.doublebedroom,images.largesinglebedroom,images.livingroom,images.kitchen,images.garden].map(
+          {[images.fbathroom,images.fbathroom1,images.fbathroom3,images.masterbedroom1,images.masterbedroom2,images.masterbedroom4,images.largesinglebedroom1,images.largesinglebedroom2,images.largesinglebedroom3,images.largesinglebedroom4,images.livingroom,images.kitchen1,images.kitchen2,images.kitchen3,images.garden].map(
             (image, index) => (
               <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 2}`}>
                 <img src={image} alt="gallery_image" />

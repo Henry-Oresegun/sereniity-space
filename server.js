@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+require('dotenv').config();
 
 
 const app = express();
@@ -9,14 +10,14 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static(path.join('/Users/henryoresegun/projects/serenity-spaces', 'public')));
 
-app.get('/',  (res) => {
+app.get('/',  (_req, res) => {
   res.sendFile(path.join('/Users/henryoresegun/projects/serenity-spaces', 'public', 'index.html'));
 });
 
 app.post('/api/send-email', (req, res) => {
   const { fullName, phoneNumber, email } = req.body;
 
-  // Configure nodemailer with your email service provider details
+
   const transporter = nodemailer.createTransport({
     host: 'smtpout.secureserver.net',
     port: 465,
@@ -27,7 +28,7 @@ app.post('/api/send-email', (req, res) => {
     },
   });
 
-  // Construct the email message
+
   const mailOptions = {
     from: 'Info@Serenityspaceluxuryhomes.com',
     to: 'Info@Serenityspaceluxuryhomes.com',
@@ -40,7 +41,7 @@ app.post('/api/send-email', (req, res) => {
     `,
   };
 
-  // Send the email
+
   transporter.sendMail(mailOptions, (error) => {
     if (error) {
       console.error('Failed to send email:', error);
@@ -55,4 +56,5 @@ app.post('/api/send-email', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
   console.log(__dirname);
+  console.log(process.env.PASSWORD);
 });
